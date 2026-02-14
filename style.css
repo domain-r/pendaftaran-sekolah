@@ -1,3 +1,6 @@
+/* =====================
+   RESET
+===================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -149,6 +152,16 @@ body {
 /* =====================
    FORM PENDAFTARAN
 ===================== */
+.form-wrapper {
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+form {
+  max-width: 360px;
+  margin: auto;
+}
+
 form input,
 form textarea {
   width: 100%;
@@ -158,6 +171,7 @@ form textarea {
   padding: 12px;
   border-radius: 12px;
   margin-bottom: 14px;
+  font-size: 13px;
 }
 
 form textarea {
@@ -174,4 +188,53 @@ form button {
   border-radius: 14px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* =====================
+   RESPONSIVE HP
+===================== */
+@media (max-width: 600px) {
+  .container {
+    max-width: 380px;
+    padding: 18px 14px;
+  }
+
+  .school-logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 12px;
+  }
+
+  .school-header {
+    margin-bottom: 26px;
+  }
+
+  .school-header h1 {
+    font-size: 20px;
+  }
+
+  .school-header p {
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
 }
