@@ -16,10 +16,9 @@ body {
   padding: 20px;
   font-family: Arial, sans-serif;
 
-  /* Background pake foto lo */
-  background: 
+  background:
     linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('foto-background.jpg') center/cover no-repeat;
+    url('background.png') center/cover no-repeat;
 
   color: #fff;
 }
