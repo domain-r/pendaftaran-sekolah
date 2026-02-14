@@ -1,16 +1,22 @@
+document.getElementById("formDaftar").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-function kirimWA(){
-let nama=document.getElementById('nama').value;
-let asal=document.getElementById('asal').value;
-let ortu=document.getElementById('ortu').value;
-let hp=document.getElementById('hp').value;
+  const nama = document.getElementById("nama").value;
+  const asal = document.getElementById("asal").value;
+  const ortu = document.getElementById("ortu").value;
+  const wa = document.getElementById("wa").value;
+  const alamat = document.getElementById("alamat").value;
 
-let pesan=`Pendaftaran Sekolah%0A
-Nama: ${nama}%0A
-Asal Sekolah: ${asal}%0A
-Orang Tua: ${ortu}%0A
-HP: ${hp}`;
+  const pesan = `
+PENDAFTARAN SISWA BARU
+Nama: ${nama}
+Asal Sekolah: ${asal}
+Orang Tua: ${ortu}
+No WA: ${wa}
+Alamat: ${alamat}
+`;
 
-let no='085141396865';
-window.open(`https://wa.me/62${no.substring(1)}?text=${pesan}`);
-}
+  const nomorTujuan = "6285141396865"; // NOMOR STAF
+  const url = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(pesan)}`;
+  window.open(url, "_blank");
+});
