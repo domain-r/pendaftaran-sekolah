@@ -1,10 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Form Pendaftaran</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Form Pendaftaran</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Reset & font */
+* { box-sizing: border-box; margin:0; padding:0; font-family:'Segoe UI', sans-serif; }
+body {
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: url('background.png') center/cover no-repeat;
+}
+
+/* Overlay tipis biar teks terbaca */
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.35);
+  z-index:0;
+}
+
+/* Card */
+.card {
+  position:relative;
+  z-index:1;
+  width: 100%;
+  max-width:500px;
+  background: rgba(0,0,0,0.25);
+  padding:30px;
+  border-radius:16px;
+  color:#fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+}
+
+h1 {
+  text-align:center;
+  margin-bottom:20px;
+  font-size:22px;
+}
+
+form input, form textarea {
+  width:100%;
+  padding:12px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.35);
+  background: rgba(0,0,0,.45);
+  color:#fff;
+}
+
+form textarea { resize:none; height:90px; }
+
+.btn {
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  background: rgba(0,0,0,.6);
+  border:2px solid #fff;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.btn:hover { background:#fff; color:#000; }
+</style>
 </head>
 <body>
 
@@ -22,6 +86,20 @@
   </form>
 </div>
 
-<script src="form.js"></script>
-</body>
-</html>
+<script>
+const form = document.getElementById('formDaftar');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const nama = document.getElementById('nama').value;
+  const asal = document.getElementById('asal').value;
+  const ortu = document.getElementById('ortu').value;
+  const alamat = document.getElementById('alamat').value;
+
+  let msg = `Pendaftaran Siswa:\n\nNama: ${nama}\nAsal Sekolah: ${asal}\nNama Orang Tua: ${ortu}\nAlamat: ${alamat}`;
+
+  // Kirim langsung ke WA fixed
+  const waLink = `https://wa.me/6285141396865?text=${encodeURIComponent(msg)}`;
+  window.open(waLink, '_blank');
+});
+</script>
