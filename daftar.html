@@ -1,23 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Pendaftaran</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Form Pendaftaran</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 class="center">Form Pendaftaran</h1>
+<div class="card">
+  <h1>Form Pendaftaran Siswa</h1>
 
-<form onsubmit="kirimWA(); return false;" class="card">
-<input type="text" id="nama" placeholder="Nama Lengkap" required>
-<input type="text" id="asal" placeholder="Asal Sekolah" required>
-<input type="text" id="ortu" placeholder="Nama Orang Tua" required>
-<input type="text" id="hp" placeholder="No HP" required>
-<button type="submit" class="btn">Kirim via WhatsApp</button>
-</form>
+  <form id="formDaftar">
+    <input type="text" id="nama" placeholder="Nama Lengkap Siswa" required>
+    <input type="text" id="asal" placeholder="Asal Sekolah" required>
+    <input type="text" id="ortu" placeholder="Nama Orang Tua" required>
+    <input type="tel" id="wa" placeholder="Nomor WhatsApp Aktif" required>
+    <textarea id="alamat" placeholder="Alamat Lengkap" required></textarea>
 
-<script src="js/form.js"></script>
+    <button type="submit" class="btn">KIRIM PENDAFTARAN</button>
+  </form>
+</div>
+
+<script src="form.js"></script>
 </body>
 </html>
