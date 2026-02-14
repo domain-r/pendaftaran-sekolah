@@ -1,71 +1,177 @@
-body {
-  background: #0e0e0e;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  color: #fff;
 }
 
+body {
+  background: #0e0e0e;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* =====================
+   CONTAINER
+===================== */
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 20px;
+  padding: 24px;
 }
 
+/* =====================
+   HEADER SEKOLAH
+===================== */
 .school-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .school-logo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid rgba(255,255,255,.9);
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
+.school-header h1 {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.school-header p {
+  opacity: .8;
+  margin-top: 6px;
+}
+
+/* =====================
+   CARD UMUM
+===================== */
 .card {
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.22);
   border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 22px;
+  margin-bottom: 22px;
 }
 
 .card h2 {
-  margin-bottom: 10px;
   font-size: 20px;
+  margin-bottom: 12px;
+  border-left: 4px solid #fff;
+  padding-left: 10px;
 }
 
-.card p, .card li {
+.card p,
+.card li {
   color: #ddd;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 14px;
 }
 
-.uniforms{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:14px;
-  margin-top:12px;
+.card ul {
+  padding-left: 20px;
 }
 
-.uniform{
-  border:1px solid rgba(255,255,255,.35);
-  border-radius:12px;
-  overflow:hidden;
-  background:rgba(0,0,0,.45);
-  text-align:center;
+/* =====================
+   EKSKUL (TEXT ONLY)
+===================== */
+.eksul-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.uniform img{
-  width:100%;
-  height:140px;
-  object-fit:cover;
+.eksul-list span {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.25);
+  font-size: 13px;
 }
 
-.uniform span{
-  display:block;
-  padding:8px;
-  font-size:13px;
-  opacity:.9;
+/* =====================
+   SERAGAM (PAKE FOTO)
+===================== */
+.uniforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.uniform {
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0,0,0,.45);
+  text-align: center;
+}
+
+.uniform img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.uniform span {
+  display: block;
+  padding: 8px;
+  font-size: 13px;
+  opacity: .9;
+}
+
+/* =====================
+   TOMBOL
+===================== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 26px;
+  background: rgba(0,0,0,.6);
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =====================
+   FORM PENDAFTARAN
+===================== */
+form input,
+form textarea {
+  width: 100%;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+form textarea {
+  resize: none;
+  height: 90px;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
