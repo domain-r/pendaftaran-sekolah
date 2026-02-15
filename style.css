@@ -1,5 +1,5 @@
 /* =====================
-   RESET
+       Css Ruxue
 ===================== */
 * {
   box-sizing: border-box;
@@ -22,18 +22,13 @@ body {
 
   color: #fff;
 }
-/* =====================
-   CONTAINER
-===================== */
+
 .container {
   max-width: 900px;
   margin: auto;
   padding: 24px;
 }
 
-/* =====================
-   HEADER SEKOLAH
-===================== */
 .school-header {
   text-align: center;
   margin-bottom: 36px;
@@ -58,9 +53,6 @@ body {
   margin-top: 6px;
 }
 
-/* =====================
-   CARD UMUM
-===================== */
 .card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.22);
@@ -87,9 +79,6 @@ body {
   padding-left: 20px;
 }
 
-/* =====================
-   EKSKUL (TEXT ONLY)
-===================== */
 .eksul-list {
   display: flex;
   flex-wrap: wrap;
@@ -104,9 +93,6 @@ body {
   font-size: 13px;
 }
 
-/* =====================
-   SERAGAM (PAKE FOTO)
-===================== */
 .uniforms {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -135,9 +121,6 @@ body {
   opacity: .9;
 }
 
-/* =====================
-   TOMBOL
-===================== */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -157,9 +140,6 @@ body {
   color: #000;
 }
 
-/* =====================
-   FORM PENDAFTARAN
-===================== */
 .form-wrapper {
   margin-top: 60px;
   padding-bottom: 40px;
@@ -198,9 +178,6 @@ form button {
   cursor: pointer;
 }
 
-/* =====================
-   RESPONSIVE HP
-===================== */
 @media (max-width: 600px) {
   .container {
     max-width: 380px;
